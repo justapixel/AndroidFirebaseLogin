@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">AndroidFirebaseLogin</string>
+    <string name="signIn_email">Email</string>
+    <string name="signIn_password">Senha</string>
+    <string name="signIn_button">Login</string>
+    <string name="appExit">Sair</string>
+    <string name="signUp_name">Nome</string>
+    <string name="signUp_email">Email</string>
+    <string name="signUp_password">Senha</string>
+    <string name="signUp_button">Registrar</string>
+    <string name="signUp_backButton">Voltar</string>
+    <string name="home_goBack">Voltar</string>
+    <string name="home_exit">Sair</string>
+    <string name="home_image_desc">Random Image</string>
 </resources>
