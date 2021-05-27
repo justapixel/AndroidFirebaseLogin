@@ -12,4 +12,9 @@
     <string name="home_goBack">Voltar</string>
     <string name="home_exit">Sair</string>
     <string name="home_image_desc">Random Image</string>
+    <string name="signIn_create_account">Criar Conta</string>
+    <string name="signUp_confirm_password">Confirmar Senha</string>
+    <string name="signUp_login_button">Fazer Login</string>
+    <string name="home_exitButton">Sair</string>
+    <string name="home_signOut">Logout</string>
 </resources>

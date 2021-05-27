@@ -42,14 +42,27 @@
     </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/signInButton"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/signIn_button"
         android:layout_marginTop="156dp"
+        app:icon="@drawable/ic_outline_login_24"
+        style="@style/Widget.MaterialComponents.Button.Icon"
         app:layout_constraintLeft_toLeftOf="@id/passwordInputLayout"
         app:layout_constraintRight_toRightOf="@id/passwordInputLayout"
         app:layout_constraintTop_toTopOf="@id/passwordInputLayout"
         app:layout_constraintBottom_toBottomOf="@id/passwordInputLayout"
+        />
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/signUp_button"
+        android:layout_marginTop="116dp"
+        app:layout_constraintLeft_toLeftOf="@id/signInButton"
+        app:layout_constraintRight_toRightOf="@id/signInButton"
+        app:layout_constraintTop_toTopOf="@id/signInButton"
+        app:layout_constraintBottom_toBottomOf="@id/signInButton"
         />
     <Button
         android:id="@+id/exitButton"
@@ -59,9 +72,9 @@
         android:layout_marginTop="116dp"
         app:icon="@drawable/ic_outline_exit_to_app_24"
         style="@style/Widget.MaterialComponents.Button.Icon"
-        app:layout_constraintLeft_toLeftOf="@id/signInButton"
-        app:layout_constraintRight_toRightOf="@id/signInButton"
-        app:layout_constraintTop_toTopOf="@id/signInButton"
-        app:layout_constraintBottom_toBottomOf="@id/signInButton"
+        app:layout_constraintLeft_toLeftOf="@id/signUpButton"
+        app:layout_constraintRight_toRightOf="@id/signUpButton"
+        app:layout_constraintTop_toTopOf="@id/signUpButton"
+        app:layout_constraintBottom_toBottomOf="@id/signUpButton"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
