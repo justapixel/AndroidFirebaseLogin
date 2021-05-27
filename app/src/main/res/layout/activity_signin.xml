@@ -66,12 +66,13 @@
         />
     <Button
         android:id="@+id/exitButton"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/appExit"
         android:layout_marginTop="116dp"
         app:icon="@drawable/ic_outline_exit_to_app_24"
         style="@style/Widget.MaterialComponents.Button.Icon"
+        android:backgroundTint="@color/red_7"
         app:layout_constraintLeft_toLeftOf="@id/signUpButton"
         app:layout_constraintRight_toRightOf="@id/signUpButton"
         app:layout_constraintTop_toTopOf="@id/signUpButton"

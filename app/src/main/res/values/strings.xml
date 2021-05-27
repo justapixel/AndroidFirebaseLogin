@@ -17,4 +17,7 @@
     <string name="signUp_login_button">Fazer Login</string>
     <string name="home_exitButton">Sair</string>
     <string name="home_signOut">Logout</string>
+    <string name="cardTitle">Default Title</string>
+    <string name="cardSubTitle">Default Sub Title</string>
+    <string name="cardDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum, lorem ut finibus elementum, nulla nulla pretium nulla, in pulvinar nulla elit at nulla</string>
 </resources>
