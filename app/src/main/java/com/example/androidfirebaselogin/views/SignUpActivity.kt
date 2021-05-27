@@ -8,8 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.androidfirebaselogin.R
 import com.example.androidfirebaselogin.extensions.Extensions.toast
 import com.example.androidfirebaselogin.utils.FirebaseUtils.firebaseAuth
-import com.example.androidfirebaselogin.utils.FirebaseUtils.firebaseUser
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
 import kotlinx.android.synthetic.main.activity_signup.*
 
@@ -31,15 +29,6 @@ class SignUpActivity : AppCompatActivity() {
             startActivity(Intent(this, SignInActivity::class.java))
             toast("Por-Favor faça o login na sua conta")
             finish()
-        }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        val user: FirebaseUser? = firebaseAuth.currentUser
-        user?.let {
-            startActivity(Intent(this, HomeActivity::class.java))
-            toast("Bem-Vindo!!!")
         }
     }
 

@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidFirebaseLogin">
-        <activity android:name=".views.SignUpActivity">
+        <activity android:name=".views.SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.SignInActivity"/>
+        <activity android:name=".views.SignUpActivity"/>
         <activity android:name=".views.HomeActivity"/>
     </application>
 

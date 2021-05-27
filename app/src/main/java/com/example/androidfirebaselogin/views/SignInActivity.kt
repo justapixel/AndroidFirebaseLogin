@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.androidfirebaselogin.R
 import com.example.androidfirebaselogin.extensions.Extensions.toast
 import com.example.androidfirebaselogin.utils.FirebaseUtils.firebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_signin.*
 import kotlin.system.exitProcess
 
@@ -32,6 +33,15 @@ class SignInActivity : AppCompatActivity() {
         exitButton.setOnClickListener {
             moveTaskToBack(true)
             exitProcess(0)
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val user: FirebaseUser? = firebaseAuth.currentUser
+        user?.let {
+            startActivity(Intent(this, HomeActivity::class.java))
+            toast("Bem-Vindo!!!")
         }
     }
 
