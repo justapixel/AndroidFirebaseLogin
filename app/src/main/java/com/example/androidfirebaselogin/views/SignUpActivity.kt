@@ -1,6 +1,7 @@
 package com.example.androidfirebaselogin.views
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -9,14 +10,13 @@ import com.example.androidfirebaselogin.extensions.Extensions.toast
 import com.example.androidfirebaselogin.utils.FirebaseUtils.firebaseAuth
 import com.example.androidfirebaselogin.utils.FirebaseUtils.firebaseUser
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.auth.UserProfileChangeRequest
 import kotlinx.android.synthetic.main.activity_signup.*
-import kotlinx.android.synthetic.main.activity_signup.emailInputEditText
-import kotlinx.android.synthetic.main.activity_signup.passwordInputEditText
 
 class SignUpActivity : AppCompatActivity() {
     lateinit var userEmail: String
     lateinit var userPassword: String
+    lateinit var userName: String
     lateinit var signUpInputArray: Array<EditText>
 
     override fun onCreate(savedInstanceState: Bundle?){
@@ -68,13 +68,11 @@ class SignUpActivity : AppCompatActivity() {
         if (isEqualPassword()){
             userEmail = emailInputEditText.text.toString().trim()
             userPassword = passwordInputEditText.text.toString().trim()
+            userName = nameInputEditText.text.toString().trim()
 
             firebaseAuth.createUserWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    toast("Conta criada com sucesso !")
-                    sendEmailVerification()
-                    startActivity(Intent(this, HomeActivity::class.java))
-                    finish()
+                    updateProfile()
                 } else {
                     toast("Falha ao criar conta !")
                 }
@@ -82,11 +80,20 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    private fun sendEmailVerification(){
-        firebaseUser?.let {
-            it.sendEmailVerification().addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    toast("email enviado para $userEmail")
+    private fun updateProfile(){
+        firebaseAuth.currentUser?.apply {
+            var profileUpdates : UserProfileChangeRequest = UserProfileChangeRequest.Builder().setDisplayName(userName).setPhotoUri(
+                Uri.parse("https://picsum.photos/200")).build()
+            updateProfile(profileUpdates)?.addOnCompleteListener {
+                when (it.isSuccessful) {
+                    true -> apply {
+                        Intent(this@SignUpActivity, HomeActivity::class.java).apply {
+                            startActivity(this)
+                            toast("Conta criada com sucesso!!!")
+                            finish()
+                        }
+                    }
+                    false -> toast("Falha na criação")
                 }
             }
         }
