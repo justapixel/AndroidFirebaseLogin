@@ -1,4 +1,4 @@
-package com.example.androidfirebaselogin.views
+package com.example.androidfirebaselogin.views.auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.androidfirebaselogin.R
 import com.example.androidfirebaselogin.extensions.Extensions.toast
 import com.example.androidfirebaselogin.utils.FirebaseUtils.firebaseAuth
+import com.example.androidfirebaselogin.views.HomeActivity
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_signin.*
 import kotlin.system.exitProcess
@@ -28,11 +29,6 @@ class SignInActivity : AppCompatActivity() {
 
         signInButton.setOnClickListener{
             signInUser()
-        }
-
-        exitButton.setOnClickListener {
-            moveTaskToBack(true)
-            exitProcess(0)
         }
     }
 

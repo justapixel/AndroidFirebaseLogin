@@ -1,23 +1,22 @@
 <resources>
     <string name="app_name">AndroidFirebaseLogin</string>
-    <string name="signIn_email">Email</string>
-    <string name="signIn_password">Senha</string>
-    <string name="signIn_button">Login</string>
-    <string name="appExit">Sair</string>
-    <string name="signUp_name">Nome</string>
-    <string name="signUp_email">Email</string>
-    <string name="signUp_password">Senha</string>
-    <string name="signUp_button">Registrar</string>
-    <string name="signUp_backButton">Voltar</string>
-    <string name="home_goBack">Voltar</string>
-    <string name="home_exit">Sair</string>
-    <string name="home_image_desc">Random Image</string>
-    <string name="signIn_create_account">Criar Conta</string>
-    <string name="signUp_confirm_password">Confirmar Senha</string>
-    <string name="signUp_login_button">Fazer Login</string>
-    <string name="home_exitButton">Sair</string>
-    <string name="home_signOut">Logout</string>
-    <string name="cardTitle">Default Title</string>
-    <string name="cardSubTitle">Default Sub Title</string>
-    <string name="cardDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum, lorem ut finibus elementum, nulla nulla pretium nulla, in pulvinar nulla elit at nulla</string>
+    <string name="signIn_emailHint">Email</string>
+    <string name="signIn_emailHelper">Digite o seu Email</string>
+    <string name="signIn_passwordHint">Senha</string>
+    <string name="signIn_passwordHelper">Digite a sua senha</string>
+    <string name="signIn_button">Entrar</string>
+    <string name="signIn_registerDesc">Não possui conta?</string>
+    <string name="signUp_button">Criar conta</string>
+    <string name="signUp_title">Criar Conta</string>
+    <string name="signUp_nameHint">Nome</string>
+    <string name="signUp_nameHelper">Digite seu nome completo</string>
+    <string name="signUp_emailHint">Email</string>
+    <string name="signUp_emailHelper">Digite um email valido</string>
+    <string name="signUp_passwordHint">Senha</string>
+    <string name="signUp_passwordHelper">Digite uma senha com no minimo 8 caracteres</string>
+    <string name="signUp_confirmPasswordHint">Senha</string>
+    <string name="signUp_confirmPasswordHelper">Digite a mesma senha</string>
+    <string name="signUp_registerDesc">Já possui conta?</string>
+    <string name="home_title">Home</string>
+
 </resources>
