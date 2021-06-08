@@ -30,5 +30,10 @@
     <string name="home_carSuspension">Eixo e Suspensão</string>
     <string name="home_carAlign">Alinhamento</string>
     <string name="home_carEngine">Motor e Eletrica</string>
+    <string name="services_title">O que trouxe você</string>
+    <string name="services_subTitle">para o CarWorkShop</string>
+    <string name="service_desc">lista de problemas sendo resolvidos:</string>
+    <string name="home_carTiresDesc">Descrição do problema cadastrados pelo funcionario, mas sem passar de 3 linhas...</string>
+    <string name="home_carTiresStatus">Em andamento: previsão 23/06/2021</string>
 
 </resources>

@@ -88,7 +88,7 @@
             android:id="@+id/cardCarSuspension"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="12dp"
             app:cardBackgroundColor="@color/green_400"
             >
             <LinearLayout
@@ -164,7 +164,7 @@
             android:id="@+id/cardCarAlign"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="12dp"
             app:cardBackgroundColor="@color/yellow_400"
             >
             <LinearLayout
