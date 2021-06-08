@@ -20,20 +20,20 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         val user: FirebaseUser? = firebaseAuth.currentUser
-        user?.let{
-            cardTitle.text = user.displayName.toString()
-            cardSubTitle.text = user.email.toString()
-            Glide.with(this).load(user.photoUrl.toString()).diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true).into(cardImage)
-        }
-        homeLogoutButton.setOnClickListener {
-            firebaseAuth.signOut()
-            startActivity(Intent(this, SignInActivity::class.java))
-            toast("Logout efetuado com sucesso!!")
-            finish()
-        }
-        homeExitButton.setOnClickListener {
-            moveTaskToBack(true)
-            exitProcess(0)
-        }
+//        user?.let{
+//            cardTitle.text = user.displayName.toString()
+//            cardSubTitle.text = user.email.toString()
+//            Glide.with(this).load(user.photoUrl.toString()).diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true).into(cardImage)
+//        }
+//        homeLogoutButton.setOnClickListener {
+//            firebaseAuth.signOut()
+//            startActivity(Intent(this, SignInActivity::class.java))
+//            toast("Logout efetuado com sucesso!!")
+//            finish()
+//        }
+//        homeExitButton.setOnClickListener {
+//            moveTaskToBack(true)
+//            exitProcess(0)
+//        }
     }
 }

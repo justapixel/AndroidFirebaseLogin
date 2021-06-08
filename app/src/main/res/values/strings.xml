@@ -4,10 +4,10 @@
     <string name="signIn_emailHelper">Digite o seu Email</string>
     <string name="signIn_passwordHint">Senha</string>
     <string name="signIn_passwordHelper">Digite a sua senha</string>
-    <string name="signIn_button">Entrar</string>
-    <string name="signIn_registerDesc">Não possui conta?</string>
-    <string name="signUp_button">Criar conta</string>
-    <string name="signUp_title">Criar Conta</string>
+    <string name="signIn_button">ENTRAR</string>
+    <string name="signIn_registerDesc">AINDA NÃO POSSUI UMA CONTA?</string>
+    <string name="signUp_button">CRIAR CONTA</string>
+    <string name="signUp_title">Crie sua conta</string>
     <string name="signUp_nameHint">Nome</string>
     <string name="signUp_nameHelper">Digite seu nome completo</string>
     <string name="signUp_emailHint">Email</string>
@@ -17,6 +17,18 @@
     <string name="signUp_confirmPasswordHint">Senha</string>
     <string name="signUp_confirmPasswordHelper">Digite a mesma senha</string>
     <string name="signUp_registerDesc">Já possui conta?</string>
-    <string name="home_title">Home</string>
+    <string name="home_title">O que traz você</string>
+    <string name="forgotPasswordButton">ESQUECI A SENHA!</string>
+    <string name="signIn_title">Bem-Vindo de Volta!</string>
+    <string name="signUp_accountType">Tipo de Conta</string>
+    <string name="signUp_accountTypeClient">Cliente</string>
+    <string name="signUp_accountTypeEmployee">Funcionario</string>
+    <string name="home_subTitle">para o CarWorkShop?</string>
+    <string name="home_desc">qual problema você ira resolver:</string>
+    <string name="carMaintenance">Carro em manutenção</string>
+    <string name="home_carTires">Freios e Cambagem</string>
+    <string name="home_carSuspension">Eixo e Suspensão</string>
+    <string name="home_carAlign">Alinhamento</string>
+    <string name="home_carEngine">Motor e Eletrica</string>
 
 </resources>

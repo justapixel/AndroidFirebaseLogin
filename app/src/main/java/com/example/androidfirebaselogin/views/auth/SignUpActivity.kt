@@ -26,11 +26,11 @@ class SignUpActivity : AppCompatActivity() {
             signUp()
         }
 
-        signInButton.setOnClickListener{
-            startActivity(Intent(this, SignInActivity::class.java))
-            toast("Por-Favor faça o login na sua conta")
-            finish()
-        }
+//        signInButton.setOnClickListener{
+//            startActivity(Intent(this, SignInActivity::class.java))
+//            toast("Por-Favor faça o login na sua conta")
+//            finish()
+//        }
     }
 
     private fun notEmpty(): Boolean = emailInputEditText.text.toString().trim().isNotEmpty() &&
