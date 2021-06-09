@@ -35,5 +35,12 @@
     <string name="service_desc">lista de problemas sendo resolvidos:</string>
     <string name="home_carTiresDesc">Descrição do problema cadastrados pelo funcionario, mas sem passar de 3 linhas...</string>
     <string name="home_carTiresStatus">Em andamento: previsão 23/06/2021</string>
+    <string name="createService_title">Cadastrar Serviço</string>
+    <string name="createService_descHint">Detalhar problema</string>
+    <string name="createService_serviceHint">Eixo e Suspensão</string>
+    <string name="createService_datePicker">Selecione a Data</string>
+    <string name="createService_client">Selecione o Cliente</string>
+    <string name="createService_button">SALVAR</string>
+    <string name="createService_cancelButton">CANCELAR</string>
 
 </resources>
