@@ -49,5 +49,7 @@
     <string name="editService_client">Cliente</string>
     <string name="editService_button">SALVAR</string>
     <string name="editService_cancelButton">CANCELAR</string>
+    <string name="home_logoutButton">SAIR</string>
+    <string name="signUp_backButton">Voltar</string>
 
 </resources>

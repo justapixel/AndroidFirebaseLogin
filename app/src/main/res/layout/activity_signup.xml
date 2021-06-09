@@ -20,7 +20,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <Button
+        android:id="@+id/signUpBackButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signUp_backButton"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:textColor="@color/black_800"
+        app:icon="@drawable/ic_outline_chevron_left_24"
+        app:iconTint="@color/black_800"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
     <com.google.android.material.textfield.TextInputLayout
         style="@style/OutlinedRoundedBox"
         android:id="@+id/nameInputLayout"

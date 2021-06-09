@@ -35,5 +35,11 @@ class HomeActivity : AppCompatActivity() {
 //            moveTaskToBack(true)
 //            exitProcess(0)
 //        }
+        homeLogoutButton.setOnClickListener {
+            firebaseAuth.signOut()
+            startActivity(Intent(this, SignInActivity::class.java))
+            toast("Logout efetuado com sucesso!!")
+            finish()
+        }
     }
 }
