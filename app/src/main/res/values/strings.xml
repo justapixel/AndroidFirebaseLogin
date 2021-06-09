@@ -42,5 +42,12 @@
     <string name="createService_client">Selecione o Cliente</string>
     <string name="createService_button">SALVAR</string>
     <string name="createService_cancelButton">CANCELAR</string>
+    <string name="editService_title">Editar Serviço</string>
+    <string name="editService_serviceHint">Eixo e Suspensão</string>
+    <string name="editService_descHint">Dethales do serviço</string>
+    <string name="editService_datePicker">Data</string>
+    <string name="editService_client">Cliente</string>
+    <string name="editService_button">SALVAR</string>
+    <string name="editService_cancelButton">CANCELAR</string>
 
 </resources>
