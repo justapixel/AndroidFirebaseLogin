@@ -104,6 +104,7 @@
         app:layout_constraintRight_toRightOf="@+id/datePickerInputLayout"
         >
         <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/clientInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
