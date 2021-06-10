@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.auth.SignInActivity"
+    tools:context=".views.services.RegisterService"
     tools:ignore="AutoFill, LabelFor"
     >
     <TextView
@@ -38,6 +38,7 @@
         app:layout_constraintTop_toTopOf="parent"
         >
         <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/serviceTypeInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
@@ -123,7 +124,7 @@
         app:layout_constraintTop_toBottomOf="@id/clientInputLayout"
         />
     <Button
-        android:id="@+id/forgotButton"
+        android:id="@+id/cancelButton"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

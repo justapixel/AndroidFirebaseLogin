@@ -10,7 +10,6 @@ import com.example.androidfirebaselogin.utils.FirebaseUtils.firebaseAuth
 import com.example.androidfirebaselogin.views.HomeActivity
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_signin.*
-import kotlin.system.exitProcess
 
 class SignInActivity : AppCompatActivity() {
     lateinit var userEmail: String
