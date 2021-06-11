@@ -25,6 +25,7 @@ class RegisterService : AppCompatActivity() {
     lateinit var clientSelect: String
     private val calend: Calendar = Calendar.getInstance()
     lateinit var signUpInputArray: Array<EditText>
+    private val store = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,17 +45,29 @@ class RegisterService : AppCompatActivity() {
                 calend.set(Calendar.DAY_OF_MONTH, dayofMonth)
                 updateDateInView()
             }
-        datePickerInputLayout.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(view: View) {
-                DatePickerDialog(this@MainActivity,
-                    dateSetListener,
-                    // set DatePickerDialog to point to today's date when it loads up
-                    cal.get(Calendar.YEAR),
-                    cal.get(Calendar.MONTH),
-                    cal.get(Calendar.DAY_OF_MONTH)).show()
-            }
 
-        })
+        datePickerInputEditText.setOnClickListener {
+            DatePickerDialog(
+                this@RegisterService,
+                dateSetListener,
+                // set DatePickerDialog to point to today's date when it loads up
+                calend.get(Calendar.YEAR),
+                calend.get(Calendar.MONTH),
+                calend.get(Calendar.DAY_OF_MONTH)
+            ).show()
+        }
+
+        store.collection("users").whereEqualTo("type", "Cliente").get().addOnSuccessListener { documents ->
+            val arrayClientList = ArrayList<String>()
+            for(document in documents){
+                arrayClientList.add(document.get("email") as String)
+            }
+            val clientAdapter = ArrayAdapter(this, R.layout.dropdown_item, arrayClientList)
+            clientInputEditText.setAdapter(clientAdapter)
+            clientInputEditText.threshold = 3
+        }.addOnFailureListener {
+            toast("Falha ao buscar clientes")
+        }
 
         cancelButton.setOnClickListener{
             finish()
@@ -63,6 +76,7 @@ class RegisterService : AppCompatActivity() {
             createService()
         }
     }
+
 
     private fun updateDateInView(){
         val myFormat = "dd/MM/yyyy"
@@ -83,7 +97,12 @@ class RegisterService : AppCompatActivity() {
                 }
             }
         }
-        val store = FirebaseFirestore.getInstance()
+
+        selectedServiceType = serviceTypeInput.text.toString()
+        descService = descInputEditText.text.toString()
+        dateService = datePickerInputEditText.text.toString()
+        clientSelect = clientInputEditText.text.toString()
+
         val service = hashMapOf<String, Any>(
             "id" to FirebaseUtils.firebaseAuth.uid.toString(),
             "type" to selectedServiceType,
